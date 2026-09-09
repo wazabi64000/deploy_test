@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Dev Python</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">&lt;DevPython /&gt;</div>
+    <ul class="nav-links">
+      <li><a href="#about">A propos</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Bonjour, je suis</p>
+      <h1 class="hero-name">Alexandre Dupont</h1>
+      <p class="hero-title">
+        <span class="typed" id="typed"></span><span class="cursor">|</span>
+      </p>
+      <p class="hero-desc">Je construis des applications Python robustes, de l'automation au web en passant par la data.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn btn-outline">Me contacter</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <pre class="code-window"><code><span class="kw">class</span> <span class="cls">Developer</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(self):
+        self.name = <span class="str">"Alexandre"</span>
+        self.role = <span class="str">"Python Dev"</span>
+        self.passion = <span class="str">"Clean Code"</span>
+
+    <span class="kw">def</span> <span class="fn">code</span>(self, problem):
+        <span class="kw">return</span> self.solve(problem)
+
+dev = Developer()
+dev.code(<span class="str">"challenges"</span>)</code></pre>
+    </div>
+  </header>
+
+  <section class="section" id="about">
+    <h2 class="section-title">&lt;A propos /&gt;</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Developpeur Python passionné avec <strong>4 ans d'experience</strong>. Je specialise dans le développement d'API performantes, l'analyse de données et l'automatisation de processus.</p>
+        <p>Je crois que le code doit etre lisible, maintenable et elegant. Chaque projet est une occasion d'apprendre quelque chose de nouveau.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <span class="stat-number" data-target="4">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Annees d'XP</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Projets livres</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="15">0</span><span class="stat-suffix">k</span>
+          <span class="stat-label">Commits GitHub</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="skills">
+    <h2 class="section-title">&lt;Skills /&gt;</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">🐍</div>
+        <h3>Python</h3>
+        <p>FastAPI, Django, Flask, asyncio, dataclasses</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🗄️</div>
+        <h3>Base de données</h3>
+        <p>PostgreSQL, MongoDB, Redis, SQLAlchemy</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">☁️</div>
+        <h3>Cloud & DevOps</h3>
+        <p>Docker, AWS, CI/CD, GitHub Actions</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📊</div>
+        <h3>Data & ML</h3>
+        <p>Pandas, NumPy, scikit-learn, Matplotlib</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🌐</div>
+        <h3>Web Scraping</h3>
+        <p>Scrapy, BeautifulSoup, Selenium, Playwright</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🔧</div>
+        <h3>Outils</h3>
+        <p>Git, VS Code, Linux, Vim, Poetry</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <h2 class="section-title">&lt;Projets /&gt;</h2>
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-folder">📁</span>
+          <div class="project-links">
+            <a href="#" aria-label="GitHub">GH</a>
+            <a href="#" aria-label="Demo">DEMO</a>
+          </div>
+        </div>
+        <h3 class="project-name">API REST — Task Manager</h3>
+        <p class="project-desc">API complete avec auth JWT, rate limiting, pagination et tests unitaires. FastAPI + PostgreSQL + Redis.</p>
+        <div class="project-tech">
+          <span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>JWT</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-folder">📁</span>
+          <div class="project-links">
+            <a href="#" aria-label="GitHub">GH</a>
+            <a href="#" aria-label="Demo">DEMO</a>
+          </div>
+        </div>
+        <h3 class="project-name">Web Scraper — E-commerce Price Tracker</h3>
+        <p class="project-desc">Scraper automatisé qui surveille les prix sur 5 sites e-commerce et envoie des alertes par email/Telegram.</p>
+        <div class="project-tech">
+          <span>Scrapy</span><span>Playwright</span><span>SQLite</span><span>Telegram Bot</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-folder">📁</span>
+          <div class="project-links">
+            <a href="#" aria-label="GitHub">GH</a>
+          </div>
+        </div>
+        <h3 class="project-name">ML Pipeline — Sentiment Analyzer</h3>
+        <p class="project-desc">Pipeline de machine learning pour classifier les avis clients en temps reel. Interface Streamlit pour la visualisation.</p>
+        <div class="project-tech">
+          <span>scikit-learn</span><span>Pandas</span><span>Streamlit</span><span>Docker</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-folder">📁</span>
+          <div class="project-links">
+            <a href="#" aria-label="GitHub">GH</a>
+            <a href="#" aria-label="Demo">DEMO</a>
+          </div>
+        </div>
+        <h3 class="project-name">CLI Tool — Project Scaffold</h3>
+        <p class="project-desc">CLI Python pour generer des structures de projet standardisees avec templates, hooks pre-commit et config CI/CD.</p>
+        <div class="project-tech">
+          <span>Click</span><span>Jinja2</span><span>Poetry</span><span>GitHub Actions</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="contact">
+    <h2 class="section-title">&lt;Contact /&gt;</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>Vous avez un projet en tete ou une question ? N'hesitez pas a me contacter.</p>
+        <div class="contact-links">
+          <a href="mailto:alex@example.com" class="contact-item">
+            <span class="contact-icon">✉️</span> alex@example.com
+          </a>
+          <a href="https://github.com/" class="contact-item" target="_blank">
+            <span class="contact-icon">🐙</span> GitHub
+          </a>
+          <a href="https://linkedin.com/" class="contact-item" target="_blank">
+            <span class="contact-icon">💼</span> LinkedIn
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <input type="text" id="name" placeholder=" " required>
+          <label for="name">Nom</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder=" " required>
+          <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+          <textarea id="message" rows="5" placeholder=" " required></textarea>
+          <label for="message">Message</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Envoyer</button>
+        <p class="form-status" id="form-status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&lt;Construit avec Python & du cafe /&gt;</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
