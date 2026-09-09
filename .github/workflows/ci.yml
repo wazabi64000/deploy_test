@@ -19,15 +19,15 @@ jobs:
         run: |
           test -f index.html && echo "✓ index.html existe"
           test -f css/style.css && echo "✓ css/style.css existe"
-          test -f js/app.js && echo "✓ js/app.js existe"
+          test -f js/script.js && echo "✓ js/script.js existe"
 
       - name: Vérifier que les fichiers ne sont pas vides
         run: |
           test -s index.html && echo "✓ index.html non vide"
           test -s css/style.css && echo "✓ css/style.css non vide"
-          test -s js/app.js && echo "✓ js/app.js non vide"
+          test -s js/script.js && echo "✓ js/script.js non vide"
 
       - name: Vérifier les liens entre fichiers
         run: |
           grep -q "css/style.css" index.html && echo "✓ CSS lié dans le HTML"
-          grep -q "js/app.js" index.html && echo "✓ JS lié dans le HTML"
+          grep -q "js/script.js" index.html && echo "✓ JS lié dans le HTML"
