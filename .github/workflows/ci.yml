@@ -11,5 +11,5 @@ jobs:
 		runs-on: ubuntu-latest
 		steps: 
 			- name: Afficher un message 
-			run : echo "Bonjour debuops Github Action!!!!"
+			  run : echo "Bonjour debuops Github Action!!!!"
 	
